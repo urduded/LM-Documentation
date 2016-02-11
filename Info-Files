@@ -1,0 +1,30 @@
+Info Files:
+By Lukie D.
+
+Last edit: 2/10/2016
+------------------------------------------------------------------------
+Index:
+========================================================================
+-What are Info files used for?
+
+-Info File Format
+  -Header
+  -Nodes
+  -Entries
+  
+-Info File Notes
+  -Node ID# Meanings
+  -Which Entry is for what
+  
+=========================================================================
+-------------------------------------------------------------------------
+Info File Format:
+=========================================================================
+Key:
+  u32 = unsigned int
+  u16 = unsigned short (a number that can range from 0-65535, or 0x0000 to 0xFFFF)
+  u8 = unsigned char (a number that can range from 0-255, or 0x00 - 0xFF)
+  float = float (decimal number)
+_________________________
+Header:
+  unsigned int EntryCount
