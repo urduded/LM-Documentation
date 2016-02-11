@@ -8,6 +8,7 @@ Index:
 -What are Info files used for?
 
 -Info File Format
+  -Key
   -Header
   -Nodes
   -Entries
@@ -21,10 +22,14 @@ Index:
 Info File Format:
 =========================================================================
 Key:
-  u32 = unsigned int
-  u16 = unsigned short (a number that can range from 0-65535, or 0x0000 to 0xFFFF)
+  u32 = unsigned int (a number that can range from 0-4294967295, or 0x00000000 - 0xFFFFFFFF)
+  u16 = unsigned short (a number that can range from 0-65535, or 0x0000 - 0xFFFF)
   u8 = unsigned char (a number that can range from 0-255, or 0x00 - 0xFF)
-  float = float (decimal number)
+  float = float (decimal number. Is 32-bit. It has 6 places to the right of the dot (0.000000) 1.000000 looks like 0x3F800000)
+  String = String (An array of characters/chars. Makes up text)
 _________________________
 Header:
-  unsigned int EntryCount
+  u32 EntryCount //How many Entries there are in the file.
+  u32 NodeCount //How many nodes there are in the file.
+  u32 FirstEntryOffset //The Offset position of where the first Entry starts.
+  u32 EntrySize //The size (in bytes) of each node.
